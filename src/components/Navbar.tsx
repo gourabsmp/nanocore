@@ -1,5 +1,5 @@
 import { ShoppingCart, Menu } from "lucide-react";
-import { Button } from "./ui/Button";
+
 
 export function Navbar() {
   return (
@@ -7,7 +7,7 @@ export function Navbar() {
       {/* Logo Area (Fixed Top Left) */}
       <a href="#" className="fixed top-6 left-6 md:left-12 z-50 group cursor-pointer transition-all duration-300 hover:scale-105 hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.6)]">
         <img 
-          src="/assets/logo.jpg" 
+          src="assets/logo.jpg" 
           alt="NanoCore Logo" 
           className="h-20 w-auto object-contain" 
         />

@@ -57,7 +57,7 @@ export function ProductSection() {
     {
       name: "NANO-A39L Smart WiFi CCTV",
       price: "₱5,999",
-      imageUrl: "/assets/NANO-A39L%20Smart%20WiFi%20CCTV.png",
+      imageUrl: "assets/NANO-A39L%20Smart%20WiFi%20CCTV.png",
       features: [
         "View Anytime via Mobile App",
         "WiFi Ready - Easy Setup",
@@ -70,7 +70,7 @@ export function ProductSection() {
       name: "NanoCore Attendance Biometric System",
       price: "₱4,999",
       originalPrice: "₱6,000",
-      imageUrl: "/assets/NanoCore%20Attendance%20Biometric%20System.png",
+      imageUrl: "assets/NanoCore%20Attendance%20Biometric%20System.png",
       features: [
         "USB Data Export to Excel",
         "Fingerprint Recognition (1,200 users)",
