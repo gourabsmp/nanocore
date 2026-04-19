@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-white antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+@keyframes fade-in-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.6s ease-out;
+}
+@layer utilities {
+  /* Glassmorphism base */
+  .glass {
+    @apply bg-white/5 backdrop-blur-md border border-white/20 rounded-xl text-white;
+  }
+
+  /* Floating subtle vertical oscillation */
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Shiny gradient overlay for primary buttons */
+  .shine {
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 100%);
+    background-size: 200% 100%;
+    animation: shine 3s linear infinite;
+  }
+
+  /* Animated grid background for hero */
+  .bg-grid {
+    background-image: radial-gradient(circle at 50% 0, #3b82f6 0.5px, transparent 0.5px),
+                      radial-gradient(circle at 50% 100%, #a78bfa 0.5px, transparent 0.5px);
+    background-size: 30px 30px;
+    animation: grid-move 30s linear infinite;
+  }
+
+  /* Body gradient and vignette */
+  body {
+    @apply bg-deep-navy;
+    background: radial-gradient(circle at 20% 30%, #020617 0%, #0a0e2c 70%);
+  }
+  body::before {
+    content: '';
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(ellipse at center, transparent, rgba(0,0,0,0.4));
+    z-index: -1;
+  }
+}
