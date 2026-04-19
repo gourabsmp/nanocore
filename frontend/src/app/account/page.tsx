@@ -416,6 +416,7 @@ function InsightCard({ icon, title, subtitle, progress, color, onReview }: any) 
 }
 
 function OrdersSection() {
+  const router = useRouter();
   const [orders, setOrders] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
 
