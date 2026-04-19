@@ -70,7 +70,7 @@ router.post('/login', async (req: Request, res: Response) => {
 });
 
 // GET /api/auth/me
-router.get('/me', authMiddleware, async (req: AuthRequest, res: Response) => {
+router.get('/me', authMiddleware, async (req: any, res: Response) => {
   try {
     const user = await prisma.user.findUnique({
       where: { id: req.user!.userId },
@@ -89,7 +89,7 @@ router.get('/me', authMiddleware, async (req: AuthRequest, res: Response) => {
 });
 
 // PUT /api/auth/profile
-router.put('/profile', authMiddleware, async (req: AuthRequest, res: Response) => {
+router.put('/profile', authMiddleware, async (req: any, res: Response) => {
   try {
     const { name, phone, address } = req.body;
     
