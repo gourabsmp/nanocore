@@ -99,7 +99,7 @@ export function Navbar() {
             href="/login"
             className="hidden sm:inline-flex items-center justify-center bg-gradient-to-r from-blue-500 to-purple-600 text-white text-[10px] font-black uppercase tracking-[0.2em] rounded-xl px-6 py-2.5 transition-all hover:scale-105 hover:shadow-[0_0_20px_rgba(59,130,246,0.4)]"
           >
-            Access Terminal
+            Sign In
           </Link>
         )}
 
