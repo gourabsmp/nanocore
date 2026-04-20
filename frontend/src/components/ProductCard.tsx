@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Check, ShoppingCart, ArrowRight, Image as ImageIcon } from 'lucide-react';
 import { Button } from '@/components/ui/Button';
 import { useCartStore } from '@/store/cartStore';
+import { useAuthStore } from '@/store/authStore';
 
 interface Variant {
   id: number;
@@ -26,12 +27,18 @@ interface Product {
 export function ProductCard({ product }: { product: Product }) {
   const router = useRouter();
   const addItem = useCartStore((s) => s.addItem);
+  const user = useAuthStore((s) => s.user);
   const [added, setAdded] = useState(false);
   
   const firstVariant = product.variants[0];
   const inStock = firstVariant && firstVariant.stock > 0;
 
   const handleAction = () => {
+    if (!user) {
+      router.push('/login?redirect=/products');
+      return;
+    }
+
     if (added) {
       router.push('/cart');
       return;
