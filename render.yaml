@@ -18,6 +18,8 @@ services:
         generateValue: true
       - key: PORT
         value: 5000
+      - key: ALLOWED_ORIGINS
+        value: https://nanocore.vercel.app,http://localhost:3000
 
   # Frontend Web
   - type: web
