@@ -21,7 +21,7 @@ services:
       - key: ALLOWED_ORIGINS
         value: https://nanocore.vercel.app,http://localhost:3000
 
-  # Frontend Web
+  # Frontend Web (Optional if using Vercel, but kept for parity)
   - type: web
     name: nanocore-frontend
     env: node
